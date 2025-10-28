@@ -15,5 +15,5 @@ print(f"b is {b}")
 
 # Try to puzzle it out, and then move on to 020_state_tables.py
 #
-# Completed
+# Completed.
 #
