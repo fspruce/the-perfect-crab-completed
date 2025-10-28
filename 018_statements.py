@@ -41,5 +41,7 @@ print("---")
 #
 # You'll see that the first `19` value is thrown away and replaced with the
 # second `20` value.
-
+#
+# Completed
+#
 # When you're ready, move on to 019_state.py
