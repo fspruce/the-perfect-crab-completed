@@ -46,5 +46,5 @@ def print_numbers_in_range_with_a_while():
 
 # To start summarising, go to 034_summarising.py
 #
-# Completed
+# Completed.
 #
