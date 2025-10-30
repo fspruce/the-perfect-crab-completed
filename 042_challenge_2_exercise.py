@@ -11,17 +11,21 @@
 
 # 1. Right now users can place their tiles over the other
 #    user's tiles. Prevent this.
+# [X] Completed
 
 # 2. Right now if the game reaches a draw with no more free
 #    spaces, the game doesn't end. Make it end at that
 #    point.
+# [ ] Completed
 
 # 3. If you want a real challenge, try to rework this
 #    program to support a 5x5 board rather than a 3x3 board.
+# [ ] Completed
 
 # 4. If you're still not satisfied, try to rework this
 #    program to take a parameter `board_size` and play a
 #    game with a board of that size.
+# [ ] Completed
 
 # This is getting really challenging now — and is entirely optional. Don't
 # forget about your assessment!
@@ -40,6 +44,9 @@ def play_game():
     # We then need to convert it to a number using `int`
     row = int(input("Enter a row: "))
     column = int(input("Enter a column: "))
+    if "." not in board[row][column]:
+      print("This space is already taken!")
+      continue;
     board = make_move(board, row, column, player)
     if player == "X":
       player = "O"
