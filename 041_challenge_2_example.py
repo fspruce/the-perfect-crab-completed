@@ -150,3 +150,6 @@ play_game()
 # @TASK Run this file to play the game.
 
 # Once you're done, move on to 042_challenge_2_exercise.py
+#
+# Completed
+#
