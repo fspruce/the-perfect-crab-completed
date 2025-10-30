@@ -16,7 +16,7 @@
 # 2. Right now if the game reaches a draw with no more free
 #    spaces, the game doesn't end. Make it end at that
 #    point.
-# [ ] Completed
+# [X] Completed
 
 # 3. If you want a real challenge, try to rework this
 #    program to support a 5x5 board rather than a 3x3 board.
@@ -87,6 +87,14 @@ def are_all_cells_the_same(board, coord_1, coord_2, coord_3):
   cells = get_cells(board, coord_1, coord_2, coord_3)
   return cells[0] == cells[1] and cells[1] == cells[2]
 
+# This function will check if there are any available spaces left on the board
+# If a "." appears in a row, a space is available
+def are_any_spaces_available(board):
+  for row in board:
+    if "." in row:
+      return True
+  return False
+
 # We'll make a list of groups to check:
 
 groups_to_check = [
@@ -109,7 +117,7 @@ def is_game_over(board):
     # If any of them are empty, they're clearly not a winning row, so we skip
     # them.
     if is_group_complete(board, group[0], group[1], group[2]):
-      if are_all_cells_the_same(board, group[0], group[1], group[2]):
+      if are_all_cells_the_same(board, group[0], group[1], group[2]) or not are_any_spaces_available(board):
         return True # We found a winning row!
         # Note that return also stops the function
   return False # If we get here, we didn't find a winning row
